@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var schools= 
+            [
+                {"name" : "Vivekananda School","location" : "Delhi"," established" : "1971"} ,                                
+                {"name" : "Era International School","location" : "Anantapur"," established" : "1972"},
+                {"name" : "Global Wisdom International School","location" : "Chejerla"," established" : "1973"},
+                {"name" : "Little Angels Public School","location" : "Jaggayyapeta","established" : "1974"},
+                {"name" : "Little Bells E.M High School","location" : "Nellore","established" : "1975"},
+                {"name" : "Little Lights Free Education High School","location" : "Gannavaram"," established" : "1976"},
+                {"name" : "Loyola High School", "location" : "Vinukonda"," established" : "1977"},
+                {"name" : "Loyola High School International"," location" : "KD Peta"," established" : "1978"},
+                {"name" : "Loyola Public School  III","location" : ""," established" : "Vinukonda"},
+                {"name" : "Loyola Public School  III","location" : "Guntur"," established" : "1980"},                
+            ];
+
+            
+
+            var inputValue = "Loyola Public School  III";           
+            
+            for (var i = 0; i < schools.length; i++) {
+
+                var all_schools= Object.values(schools[i]);                 
+                //console.log( all_schools);
+                var result= all_schools.includes(inputValue);
+                if(result){
+                    console.log( all_schools[all_schools.indexOf(inputValue)] + " Exict in Row " + i + " " + "Column " + all_schools.indexOf(inputValue)  );
+                }
+                //console.log(result);
+
+            }
+
+
+        
+            
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var inputValue = "location";
+
+var schools= 
+            [
+                {"name" : "Vivekananda School","location" : "Delhi","established" : "1971"} ,                                
+                {"name" : "Era International School","location" : "Anantapur","established" : "1972"},
+                {"name" : "Global Wisdom International School","location" : "Chejerla","established" : "1980"},
+                {"name" : "Little Angels Public School","location" : "Jaggayyapeta","established" : "1974"},
+                {"name" : "Little Bells E.M High School","location" : "Nellore","established" : "1975"},
+                {"name" : "Little Lights Free Education High School","location" : "Gannavaram","established" : "1976"},
+                {"name" : "Loyola High School", "location" : "Vinukonda","established" : "1980"},
+                {"name" : "Loyola High School International","location" : "KD Peta","established" : "1978"},
+                {"name" : "Loyola Public School  III","location" : "","established" : "Vinukonda"},
+                {"name" : "Loyola Public School  III","location" : "Guntur","established" : "1980"},                
+            ];           
+
+                        
+            
+            // for (var i = 0; i < schools.length; i++) {
+            //     var all_schools= Object.values(schools[i]);                 
+            //     //console.log( all_schools);
+            //     var result= all_schools.includes(inputValue);
+            //     if(result){
+            //         console.log( all_schools[all_schools.indexOf(inputValue)] + " Exist in Row " + i + " " + "Column " + all_schools.indexOf(inputValue)  );
+            //     }
+            //     //console.log(result); 
+            // }
+
+
+            for (var i = 0; i < schools.length; i++) {
+
+                var all_schools_entries= Object.entries(schools[i]); 
+
+                for(var j = 0; j < all_schools_entries.length; j++){                    
+
+                    var result_all= all_schools_entries[j].includes(inputValue);                    
+
+                    if(result_all){
+
+                     console.log( all_schools_entries[j][all_schools_entries[j].indexOf(inputValue)] + " Exist in Row " + i + " " + "Column " + all_schools_entries[j].indexOf(inputValue)  );
+                   
+                    }
+
+                }
+
+            } 
+            
+
+	</script>
+</body>
+</html>

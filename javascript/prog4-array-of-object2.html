@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form>
+		<label>Type Your School Name: </label><input type="text" name="school_name" value="" id="school_name">
+		<a href="javascript:void(0);" onclick="check();">Check</a>
+	</form>
+
+	<p id="result"></p>
+	<div id="myList"></div>
+
+
+
+	<script type="text/javascript">
+
+		var ul = document.createElement('ol');
+		document.getElementById('myList').appendChild(ul);
+
+		function check(){
+
+			var  school1 = {
+			    name : "Vivekananda School",
+			    location : "Delhi",
+			    established : "1971"
+			}
+
+			var  school2 = {
+			    name : "Era International School",
+			    location : "Anantapur",
+			    established : "1972"
+			}
+
+			var  school3 = {
+			    name : "Global Wisdom International School",
+			    location : "Chejerla",
+			    established : "1973"
+			}
+			
+
+
+			var  school4 = {
+			    name : "Little Angels Public School",
+			    location : "Jaggayyapeta",
+			    established : "1974"
+			}
+
+
+			var  school5 = {
+			    name : "Little Bells E.M High School",
+			    location : "Nellore",
+			    established : "1975"
+			}
+
+
+			var  school6 = {
+			    name : "Little Lights Free Education High School",
+			    location : "Gannavaram",
+			    established : "1976"
+			}
+
+
+			var  school7 = {
+			    "name" : "Loyola High School",
+			    "location" : "Hindupur",
+			    "established" : "1977"
+                 "abc": "dsadsa45",
+                 "abch": "dsad33", 
+			}
+
+
+			var  school8 = {
+			    name : "Loyola High School International",
+			    location : "KD Peta",
+			    established : "1978"
+			}
+
+
+			var  school9 = {
+			    name : "Loyola High School II",
+			    location : "Vinukonda",
+			    established : "1979"
+			}
+
+			var  school10 = {
+			    name : "Loyola Public School  III",
+			    location : "Guntur",
+			    established : "1980"
+			}
+
+
+			var allSchools=
+
+				[
+					school1,
+				 	school2,
+				 	school3, 
+				 	school4, 
+				 	school5,
+				 	school6, 
+				 	school7, 
+				 	school8, 
+				 	school9,
+				 	school10
+				];
+
+
+               var allSchools= [
+					school1,
+				 	school2,
+				 	school3, 
+				 	school4, 
+				 	school5,
+				 	school6, 
+				 	school7, 
+				 	school8, 
+				 	school9,
+				 	{
+			    name : "Loyola Public School  III",
+			    location : "Guntur",
+			    established : "1980"
+			}
+				];
+
+
+
+				var found = document.getElementById("school_name").value;
+
+				
+
+				for(var i = 0; i < allSchools.length; i++) {
+				    
+
+				    if (allSchools[i].name === found ) {				        
+				       
+				    	document.getElementById("result").innerHTML="<strong style='color:green;'>Your School " + found + " found in list." +"</strong>";
+
+				    	document.getElementById("myList").style.display="none";			        
+
+				      	break;
+				    }
+				    // else if(allSchools[i].name.indexOf(found) > -1){
+				    	
+				    // 	console.log(allSchools[i].name.indexOf(found));
+				    // 	console.log("fsfafasf");
+				    // }
+				    else{
+
+				    	document.getElementById("myList").style.display="block";
+				    	
+				    	document.getElementById("result").innerHTML="<strong style='color:red;'>School Not Found! Available Schools are:</strong>";
+			    	 
+			    		var li = document.createElement('li');
+			    		ul.appendChild(li);
+			    		li.innerHTML += allSchools[i].name;	
+			    					    	 	
+				    }
+				}				
+		}		
+
+
+
+
+		
+	</script>
+</body>
+</html>
