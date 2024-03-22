@@ -34,7 +34,7 @@ I'm thrilled to accept contributions from the community. If you'd like to contri
 4. Push to the branch (`git push origin feature/AmazingFeature`).
 5. Open a Pull Request.
 
-Before contributing, please check out the [CONTRIBUTING.md](/CONTRIBUTING.md) file for detailed instructions.
+If you encounter any issues or have questions, feel free to contact me at gauravjoshi.uk.in@gmail.com for assistance.
 
 ## License
 
